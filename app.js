@@ -143,6 +143,7 @@ function onEachCountyFeature(countyFeature, layer) {
     var total = immigrationByCounty[countyFeature.properties.ENGLISH].total;
     var percentageFromAbroad = immigrationByCounty[countyFeature.properties.ENGLISH].percentageFromAbroad;
     layer.bindPopup('<div>' +
+        '<strong>' + countyFeature.properties.ENGLISH + '</strong>' +
         '<p>Previously abroad: ' + fromAbroad + ' (' + percentageFromAbroad.toFixed(2) + '%)</p>' +
         '<p>Total: ' + total + '</p>' +
     '</div>');
